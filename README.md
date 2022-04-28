@@ -15,65 +15,52 @@ Nombre:
 * Coloca tu nombre en este archivo README.md y realiza un push al repositorio remoto
 
 ------
+
 ## Prueba 1 ##
-* Lee la documentación del API de [JSONPlaceholder](http://jsonplaceholder.typicode.com/guide/) y crea una aplicación (dentro del directorio **Prueba_1**) en .NET que realice lo siguiente:
-	* Listar a los 10 usuarios **_(10 puntos)_**
-	* Al seleccionar un usuario muestra algunos campos con su información(name, username, email, etc.) y coloca 2 botones para poder seleccionar los "posts" y "todos" que estén relacionados con el usuario. **_(15 puntos)_**
-	* Al dar click en el botón de "posts" muestra todas las publicaciones que ha realizado el usuario, cada publicación deberá tener anidados sus comentarios. **_(15 puntos)_**
-	* Al dar click en el botón de "todos" muestra las tareas del usuario ordenadas por la propiedad "id" de mayor a menor. **_(15 puntos)_**
-	* En la sección de "todos", crea un formulario para poder agregar una nueva tarea al usuario, este debe de contener una caja de texto (title), un checkbox (completed) y un botón de guardar. Al dar click en el botón, manda la información necesaria al API con el método HTTP correcto para que la tarea quede guardada. **_(25 puntos)_**
-
-
-> *Nota: al hacer la petición de la nueva tarea, el API no la guardará y solo regresará un objeto JSON con la propiedad **id** de la nueva tarea agregada (id: 201), esto indica que todo se realizó de forma correcta*
-
-
-Algunos endpoints que puedes utilizar:
-
-* https://jsonplaceholder.typicode.com/users 
-* https://jsonplaceholder.typicode.com/users/(userId)
-* https://jsonplaceholder.typicode.com/users/(userId)/posts
-* https://jsonplaceholder.typicode.com/post/(postId)/comments
-* https://jsonplaceholder.typicode.com/users/(userId)/todos
-
-Objeto que espera el servidor para guardar la nueva tarea:
-
-
-```javascript
-{
-  "userId": <int>,
-  "title": <string>
-  "completed": <bool>
-}
-```
-
-**PLUS: Si conoces algún patrón de diseño de software no dudes en usarlo** **_(+ 10 puntos)_**
-
-------
-## Prueba 2 ##
 
 Para esta prueba será necesario agregar (al directorio **Prueba_2**) las sentencias de SQL con las que se creo el esquema(base de datos y tablas) y las consultas realizadas para responder a los siguientes puntos:
 
 > *Nota: Para realizar esta prueba es necesario tener una instancia de [SQL Server Developer, SQL Server Express](https://www.microsoft.com/es-mx/sql-server/sql-server-downloads) o [MySQL Community](https://dev.mysql.com/downloads/mysql/) instalada en tu equipo, si por algún motivo no puedes instalar una versión de las anteriores, puedes entrar a [db-fiddle](https://www.db-fiddle.com/) para realizarla*
 
 * Construye una base de datos y crea las siguientes tablas dentro de ella:
-	* **logDial** con las siguientes columnas
-		* **idLlamada** varchar(10)
-		* **fechaDeLlamada** dateTime
-		* **tiempoDialogo** smallint
-		* **telefono** varchar(10)
-		* **tipoDeLlamada** varchar(15)
-	* **costos** con las siguientes columnas
-		* **tipoDeLlamada** varchar(15)
-		* **costo** decimal(10,4)
+	* **usuarios** con las siguientes columnas
+		* **userId** int
+		* **Login** varchar(100)
+		* **Nombre** varchar(100)
+		* **Paterno** varchar(100)
+		* **Materno** varchar(100)
+
+	* **empleados** esta debe tener relacion la tabla usuarios, con las siguientes columnas
+		* **userId** int
+		* **Sueldo** double
+		* **FechaIngreso** date
+
+
 		
-* Con las tablas contruidas, inserta los datos proporcionados en el archivo de excel **DatosPracticaSQL.xlsx** que se encuentran en la carpeta **Prueba_2** (revisar las dos hojas del archivo)
+* Con las tablas contruidas, inserta los datos proporcionados en el archivo de excel **DatosPracticaSQL.xlsx** que se encuentran en la carpeta **Prueba_1** (revisar las dos hojas del archivo)
 * Genera las sentencias SQL que respondan lo siguiente:
-	* Que muestre los registros con tipo de llamada **Cel LD** durante el **mes febrero** **_(5 puntos)_**
-	* Que indique el promedio de tiempo de dialogo de las llamadas con tipo **Cel LD** durante el **mes de febrero** **_(5 puntos)_**
-	* Que muestre el **número en minutos de dialogo** (tomando tiempoDialogo que está en segundos) y el **costo** de todas las llamadas del **mes de enero** **_(10 puntos)_**
+	* Depurar solo los ID diferentes de 6,7,9 y 10  de la tabla  **usuarios** **_(5 puntos)_**
+	* Actualizar el dato Sueldo en un 10 porciento a los empleados que tienen fechas entre el año 2000 y 2001 **_(5 puntos)_**
+	* Realiza una consulta para traer el nombre de usuario y fecha de ingreso de los usuarios que gananen mas de 10000 y su apellido comience con 
+	T ordernado del mas reciente al mas antiguo **_(10 puntos)_**
+	* Realiza una consulta donde agrupes a los empleados por sueldo, un grupo con los que ganan menos de 1200 y uno mayor o igual a 1200, cuantos hay en cada grupo? **_(10 puntos)_**
 
 ------
 ### Realiza el push del código de tus pruebas y compártenos el link a tu repositorio remoto 😊 
+
+## Prueba 2 ##
+* Crea una aplicación (dentro del directorio **Prueba_2**) en .NET que realice lo siguiente:
+	* Listar top 10 usuarios de la base antes creada **_(10 puntos)_**
+	* Generar un archivo csv con las siguienets campos con su información(Login, Nombre completo, sueldo, fecha Ingreso)  **_(25 puntos)_**
+	* Poder actualizar el salario del algun usuario especifico **_(10 puntos)_**
+	* Poder Tener una opcion para agregar un nuevo usuario y se pueda asiganar el salario y la fecha de ingreso por default el dia de hoy **_(25 puntos)_**
+
+
+
+**PLUS: Si conoces algún patrón de diseño de software no dudes en usarlo** **_(+ 10 puntos)_**
+
+------
+
 
 ------
 Si tienes alguna duda sobre la evaluación puedes mandar un correo electrónico a [desarrollo@nuxiba.com](mailto:desarrollo@nuxiba.com?subject=Dudas%20sobre%20evaluación%20técnica)
