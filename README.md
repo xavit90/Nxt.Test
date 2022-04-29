@@ -46,7 +46,6 @@ Para esta prueba será necesario agregar (al directorio **Prueba_2**) las senten
 	* Realiza una consulta donde agrupes a los empleados por sueldo, un grupo con los que ganan menos de 1200 y uno mayor o igual a 1200, cuantos hay en cada grupo? **_(10 puntos)_**
 
 ------
-### Realiza el push del código de tus pruebas y compártenos el link a tu repositorio remoto 😊 
 
 ## Prueba 2 ##
 * Crea una aplicación (dentro del directorio **Prueba_2**) en .NET que realice lo siguiente:
@@ -61,6 +60,7 @@ Para esta prueba será necesario agregar (al directorio **Prueba_2**) las senten
 
 ------
 
+### Realiza el push del código de tus pruebas y compártenos el link a tu repositorio remoto 😊 
 
 ------
 Si tienes alguna duda sobre la evaluación puedes mandar un correo electrónico a [desarrollo@nuxiba.com](mailto:desarrollo@nuxiba.com?subject=Dudas%20sobre%20evaluación%20técnica)
