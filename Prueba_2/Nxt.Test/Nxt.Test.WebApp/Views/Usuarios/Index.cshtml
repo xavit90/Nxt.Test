@@ -1,45 +1,48 @@
-﻿@model IEnumerable<Nxt.Test.WebApp.Models.Usuario>
-
-@{
-    ViewData["Title"] = "Usuarios";
+﻿@{
+    ViewData["Title"] = "Empleados";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Top 10</h1>
+<h1>Empleados</h1>
 <br />
-<table class="table table-striped table-hover table-bordered table-sm">
+<table id="tblEmpleados" class="table table-striped table-hover table-bordered table-sm">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Login)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nombre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Paterno)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Materno)
-            </th>
+            <th>Login</th>
+            <th>Nombre</th>
+            <th>Paterno</th>
+            <th>Materno</th>
+            <th>Sueldo</th>
+            <th>Fecha Ingreso</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Login)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Paterno)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Materno)
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Login</td>
+                <td>@item.Nombre</td>
+                <td>@item.Paterno</td>
+                <td>@item.Materno</td>
+                <td>@item.Sueldo</td>
+                <td>@item.FechaIngreso</td>
+                <td>
+                    <a asp-action="Editar" asp-route-id="@item.UserId">Editar</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#tblEmpleados').DataTable({
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/2.1.7/i18n/es-MX.json"
+                }
+            });
+        });
+    </script>
+}

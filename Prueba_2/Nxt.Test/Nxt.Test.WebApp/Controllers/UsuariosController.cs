@@ -21,8 +21,26 @@ namespace Nxt.Test.WebApp.Controllers
             _context = context;
         }
 
-        // GET: Usuarios
+        // GET: Inicio
         public async Task<IActionResult> Index()
+        {
+            var data = await _context.Usuarios
+                .Join(_context.Empleados, u => u.UserId, e => e.UserId, (u, e) => new
+                {
+                    u.UserId,
+                    u.Login,
+                    u.Nombre,
+                    u.Paterno,
+                    u.Materno,
+                    e.Sueldo,
+                    e.FechaIngreso
+                })
+                .ToListAsync();
+            return View(data);
+        }
+
+        // GET: Top
+        public async Task<IActionResult> Top()
         {
             var usuarios = await _context.Usuarios
                 .Take(10)
@@ -45,24 +63,6 @@ namespace Nxt.Test.WebApp.Controllers
                 })
                 .ToListAsync();
             return View(data);
-        }
-
-        // GET: Usuarios/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var usuario = await _context.Usuarios
-                .FirstOrDefaultAsync(m => m.UserId == id);
-            if (usuario == null)
-            {
-                return NotFound();
-            }
-
-            return View(usuario);
         }
 
         // GET: Usuarios/Create
@@ -88,19 +88,24 @@ namespace Nxt.Test.WebApp.Controllers
         }
 
         // GET: Usuarios/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Editar(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var usuario = await _context.Usuarios.FindAsync(id);
-            if (usuario == null)
+            var vm = new EmpleadoViewModel
+            {
+                Usuario = await _context.Usuarios.FindAsync(id) ?? new Usuario(),
+                Empleado = _context.Empleados.Where(e => e.UserId == id).FirstOrDefault() ?? new Empleado()
+            };
+
+            if (vm.Usuario.UserId <= 0)
             {
                 return NotFound();
             }
-            return View(usuario);
+            return View(vm);
         }
 
         // POST: Usuarios/Edit/5
@@ -108,9 +113,9 @@ namespace Nxt.Test.WebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("UserId,Login,Nombre,Paterno,Materno")] Usuario usuario)
+        public async Task<IActionResult> Editar(int id, [Bind("Usuario,Empleado")] EmpleadoViewModel empleadoVM)
         {
-            if (id != usuario.UserId)
+            if (id != empleadoVM.Empleado.UserId)
             {
                 return NotFound();
             }
@@ -119,12 +124,14 @@ namespace Nxt.Test.WebApp.Controllers
             {
                 try
                 {
-                    _context.Update(usuario);
+                    _context.Empleados
+                        .Where(e => e.UserId == id)
+                        .ExecuteUpdate(s => s.SetProperty(e => e.Sueldo, empleadoVM.Empleado.Sueldo));
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!UsuarioExists(usuario.UserId))
+                    if (!UsuarioExists(empleadoVM.Usuario.UserId))
                     {
                         return NotFound();
                     }
@@ -135,40 +142,7 @@ namespace Nxt.Test.WebApp.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(usuario);
-        }
-
-        // GET: Usuarios/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var usuario = await _context.Usuarios
-                .FirstOrDefaultAsync(m => m.UserId == id);
-            if (usuario == null)
-            {
-                return NotFound();
-            }
-
-            return View(usuario);
-        }
-
-        // POST: Usuarios/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var usuario = await _context.Usuarios.FindAsync(id);
-            if (usuario != null)
-            {
-                _context.Usuarios.Remove(usuario);
-            }
-
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return View(empleadoVM);
         }
 
         private bool UsuarioExists(int id)

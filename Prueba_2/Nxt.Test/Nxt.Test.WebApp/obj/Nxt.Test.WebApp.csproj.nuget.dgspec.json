@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\smont\\Source\\repos\\Nxt.Test\\Nxt.Test.WebApp\\Nxt.Test.WebApp.csproj": {}
+    "C:\\Users\\smont\\Source\\repos\\Nuxiba\\testdevbackjr\\Prueba_2\\Nxt.Test\\Nxt.Test.WebApp\\Nxt.Test.WebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\smont\\Source\\repos\\Nxt.Test\\Nxt.Test.WebApp\\Nxt.Test.WebApp.csproj": {
+    "C:\\Users\\smont\\Source\\repos\\Nuxiba\\testdevbackjr\\Prueba_2\\Nxt.Test\\Nxt.Test.WebApp\\Nxt.Test.WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\smont\\Source\\repos\\Nxt.Test\\Nxt.Test.WebApp\\Nxt.Test.WebApp.csproj",
+        "projectUniqueName": "C:\\Users\\smont\\Source\\repos\\Nuxiba\\testdevbackjr\\Prueba_2\\Nxt.Test\\Nxt.Test.WebApp\\Nxt.Test.WebApp.csproj",
         "projectName": "Nxt.Test.WebApp",
-        "projectPath": "C:\\Users\\smont\\Source\\repos\\Nxt.Test\\Nxt.Test.WebApp\\Nxt.Test.WebApp.csproj",
+        "projectPath": "C:\\Users\\smont\\Source\\repos\\Nuxiba\\testdevbackjr\\Prueba_2\\Nxt.Test\\Nxt.Test.WebApp\\Nxt.Test.WebApp.csproj",
         "packagesPath": "C:\\Users\\smont\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\smont\\Source\\repos\\Nxt.Test\\Nxt.Test.WebApp\\obj\\",
+        "outputPath": "C:\\Users\\smont\\Source\\repos\\Nuxiba\\testdevbackjr\\Prueba_2\\Nxt.Test\\Nxt.Test.WebApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

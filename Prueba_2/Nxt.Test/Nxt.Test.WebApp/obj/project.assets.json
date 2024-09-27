@@ -7724,11 +7724,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\smont\\Source\\repos\\Nxt.Test\\Nxt.Test.WebApp\\Nxt.Test.WebApp.csproj",
+      "projectUniqueName": "C:\\Users\\smont\\Source\\repos\\Nuxiba\\testdevbackjr\\Prueba_2\\Nxt.Test\\Nxt.Test.WebApp\\Nxt.Test.WebApp.csproj",
       "projectName": "Nxt.Test.WebApp",
-      "projectPath": "C:\\Users\\smont\\Source\\repos\\Nxt.Test\\Nxt.Test.WebApp\\Nxt.Test.WebApp.csproj",
+      "projectPath": "C:\\Users\\smont\\Source\\repos\\Nuxiba\\testdevbackjr\\Prueba_2\\Nxt.Test\\Nxt.Test.WebApp\\Nxt.Test.WebApp.csproj",
       "packagesPath": "C:\\Users\\smont\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\smont\\Source\\repos\\Nxt.Test\\Nxt.Test.WebApp\\obj\\",
+      "outputPath": "C:\\Users\\smont\\Source\\repos\\Nuxiba\\testdevbackjr\\Prueba_2\\Nxt.Test\\Nxt.Test.WebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -7809,5 +7809,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error al obtener los datos de vulnerabilidad del paquete: No se puede cargar el índice de servicio del origen https://api.nuget.org/v3/index.json."
+    }
+  ]
 }

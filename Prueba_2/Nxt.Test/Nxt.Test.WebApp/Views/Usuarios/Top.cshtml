@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Nxt.Test.WebApp.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Usuarios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Top 10</h1>
+<br />
+<table class="table table-striped table-hover table-bordered table-sm">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Login)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Paterno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Materno)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Login)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Paterno)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Materno)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,62 @@
+﻿@model Nxt.Test.WebApp.Models.EmpleadoViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Editar</h1>
+
+<h4>Usuario</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Editar">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Usuario.UserId" />
+            <input type="hidden" asp-for="Usuario.Login" />
+            <input type="hidden" asp-for="Usuario.Nombre" />
+            <input type="hidden" asp-for="Usuario.Paterno" />
+            <input type="hidden" asp-for="Usuario.Materno" />
+            <input type="hidden" asp-for="Empleado.UserId" />
+            <input type="hidden" asp-for="Empleado.User" />
+            <input type="hidden" asp-for="Empleado.FechaIngreso" />
+            <div class="form-group">
+                <label asp-for="Usuario.Login" class="control-label"></label>
+                <input asp-for="Usuario.Login" class="form-control" readonly disabled />
+            </div>
+            <div class="form-group">
+                <label asp-for="Usuario.Nombre" class="control-label"></label>
+                <input asp-for="Usuario.Nombre" class="form-control" readonly disabled />
+            </div>
+            <div class="form-group">
+                <label asp-for="Usuario.Paterno" class="control-label"></label>
+                <input asp-for="Usuario.Paterno" class="form-control" readonly disabled />
+            </div>
+            <div class="form-group">
+                <label asp-for="Usuario.Materno" class="control-label"></label>
+                <input asp-for="Usuario.Materno" class="form-control" readonly disabled />
+            </div>
+            <div class="form-group">
+                <label asp-for="Empleado.Sueldo" class="control-label"></label>
+                <input asp-for="Empleado.Sueldo" class="form-control" />
+                <span asp-validation-for="Empleado.Sueldo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Empleado.FechaIngreso" class="control-label"></label>
+                <input asp-for="Empleado.FechaIngreso" class="form-control" readonly disabled />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Cancelar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
