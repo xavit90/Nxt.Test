@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Descargar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Descargar</h1>
+<br />
+<button onclick="DescargarCSV()">Exportar</button>
+<table id="tblEmpleados" class="table table-striped table-hover table-bordered table-sm">
+    <thead>
+        <tr>
+            <th>Login</th>
+            <th>Nombre</th>
+            <th>Paterno</th>
+            <th>Materno</th>
+            <th>Sueldo</th>
+            <th>Fecha Ingreso</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Login</td>
+                <td>@item.Nombre</td>
+                <td>@item.Paterno</td>
+                <td>@item.Materno</td>
+                <td>@item.Sueldo</td>
+                <td>@item.FechaIngreso</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Nxt.Test.WebApp.props" />
+</Project>
