@@ -8,7 +8,11 @@
         public EmpleadoViewModel()
         {
             Usuario = new Usuario();
-            Empleado = new Empleado();
+            Empleado = new Empleado
+            {
+                Sueldo = 0,
+                FechaIngreso = DateOnly.FromDateTime(DateTime.Now)
+            };
         }
     }
 }

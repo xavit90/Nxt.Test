@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.CodeAnalysis.Options;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
 using Nxt.Test.WebApp.Context;
@@ -66,7 +69,7 @@ namespace Nxt.Test.WebApp.Controllers
         }
 
         // GET: Usuarios/Create
-        public IActionResult Create()
+        public IActionResult Crear()
         {
             return View();
         }
@@ -76,15 +79,29 @@ namespace Nxt.Test.WebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("UserId,Login,Nombre,Paterno,Materno")] Usuario usuario)
+        public async Task<IActionResult> Crear([Bind("Usuario,Empleado")] EmpleadoViewModel empleadoVM)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(usuario);
+                _context.Add(empleadoVM.Usuario);
                 await _context.SaveChangesAsync();
+
+                var sql = "INSERT INTO [dbo].[Empleados] ([UserId], [Sueldo], [FechaIngreso]) VALUES (@userId, @sueldo, @fechaIngreso); " +
+                    "SELECT [UserId], [Sueldo], [FechaIngreso] FROM [dbo].[Empleados]";
+                var @params = new SqlParameter[]
+                {
+                    new("@userId", SqlDbType.Int) { Value = empleadoVM.Usuario.UserId },
+                    new("@sueldo", SqlDbType.Decimal) { Value = empleadoVM.Empleado.Sueldo },
+                    new("@fechaIngreso", SqlDbType.Date) { Value = empleadoVM.Empleado.FechaIngreso },
+                };
+                _context.Empleados.FromSqlRaw(sql, @params)
+                    .AsEnumerable()
+                    .ToList();
+                //await _context.SaveChangesAsync();
+                
                 return RedirectToAction(nameof(Index));
             }
-            return View(usuario);
+            return View(empleadoVM);
         }
 
         // GET: Usuarios/Edit/5

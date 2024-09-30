@@ -11,8 +11,12 @@
       "RelativeMoniker": "D:0:0:{6F8774CF-FD2B-403A-B355-E4C779482696}|Nxt.Test.WebApp\\Nxt.Test.WebApp.csproj|solutionrelative:nxt.test.webapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F8774CF-FD2B-403A-B355-E4C779482696}|Nxt.Test.WebApp\\Nxt.Test.WebApp.csproj|c:\\users\\smont\\source\\repos\\nuxiba\\testdevbackjr\\prueba_2\\nxt.test\\nxt.test.webapp\\views\\usuarios\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6F8774CF-FD2B-403A-B355-E4C779482696}|Nxt.Test.WebApp\\Nxt.Test.WebApp.csproj|solutionrelative:nxt.test.webapp\\views\\usuarios\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6F8774CF-FD2B-403A-B355-E4C779482696}|Nxt.Test.WebApp\\Nxt.Test.WebApp.csproj|c:\\users\\smont\\source\\repos\\nuxiba\\testdevbackjr\\prueba_2\\nxt.test\\nxt.test.webapp\\views\\usuarios\\crear.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6F8774CF-FD2B-403A-B355-E4C779482696}|Nxt.Test.WebApp\\Nxt.Test.WebApp.csproj|solutionrelative:nxt.test.webapp\\views\\usuarios\\crear.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F8774CF-FD2B-403A-B355-E4C779482696}|Nxt.Test.WebApp\\Nxt.Test.WebApp.csproj|c:\\users\\smont\\source\\repos\\nuxiba\\testdevbackjr\\prueba_2\\nxt.test\\nxt.test.webapp\\models\\empleadoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F8774CF-FD2B-403A-B355-E4C779482696}|Nxt.Test.WebApp\\Nxt.Test.WebApp.csproj|solutionrelative:nxt.test.webapp\\models\\empleadoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6F8774CF-FD2B-403A-B355-E4C779482696}|Nxt.Test.WebApp\\Nxt.Test.WebApp.csproj|c:\\users\\smont\\source\\repos\\nuxiba\\testdevbackjr\\prueba_2\\nxt.test\\nxt.test.webapp\\views\\usuarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -34,9 +38,9 @@
               "Title": "UsuariosController.cs",
               "DocumentMoniker": "C:\\Users\\smont\\Source\\repos\\Nuxiba\\testdevbackjr\\Prueba_2\\Nxt.Test\\Nxt.Test.WebApp\\Controllers\\UsuariosController.cs",
               "RelativeDocumentMoniker": "Nxt.Test.WebApp\\Controllers\\UsuariosController.cs",
-              "ToolTip": "C:\\Users\\smont\\Source\\repos\\Nuxiba\\testdevbackjr\\Prueba_2\\Nxt.Test\\Nxt.Test.WebApp\\Controllers\\UsuariosController.cs",
-              "RelativeToolTip": "Nxt.Test.WebApp\\Controllers\\UsuariosController.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAmwIIAAAA2AAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\smont\\Source\\repos\\Nuxiba\\testdevbackjr\\Prueba_2\\Nxt.Test\\Nxt.Test.WebApp\\Controllers\\UsuariosController.cs*",
+              "RelativeToolTip": "Nxt.Test.WebApp\\Controllers\\UsuariosController.cs*",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAIwF4AAACtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-27T06:19:54.479Z",
               "IsPinned": true,
@@ -50,7 +54,7 @@
               "RelativeDocumentMoniker": "Nxt.Test.WebApp\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\smont\\Source\\repos\\Nuxiba\\testdevbackjr\\Prueba_2\\Nxt.Test\\Nxt.Test.WebApp\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Nxt.Test.WebApp\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAADEAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAADEAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-09-27T06:41:03.532Z",
               "IsPinned": true,
@@ -58,26 +62,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Editar.cshtml",
-              "DocumentMoniker": "C:\\Users\\smont\\Source\\repos\\Nuxiba\\testdevbackjr\\Prueba_2\\Nxt.Test\\Nxt.Test.WebApp\\Views\\Usuarios\\Editar.cshtml",
-              "RelativeDocumentMoniker": "Nxt.Test.WebApp\\Views\\Usuarios\\Editar.cshtml",
-              "ToolTip": "C:\\Users\\smont\\Source\\repos\\Nuxiba\\testdevbackjr\\Prueba_2\\Nxt.Test\\Nxt.Test.WebApp\\Views\\Usuarios\\Editar.cshtml",
-              "RelativeToolTip": "Nxt.Test.WebApp\\Views\\Usuarios\\Editar.cshtml",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAABIAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-27T16:38:54.121Z",
+              "DocumentIndex": 3,
+              "Title": "EmpleadoViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\smont\\Source\\repos\\Nuxiba\\testdevbackjr\\Prueba_2\\Nxt.Test\\Nxt.Test.WebApp\\Models\\EmpleadoViewModel.cs",
+              "RelativeDocumentMoniker": "Nxt.Test.WebApp\\Models\\EmpleadoViewModel.cs",
+              "ToolTip": "C:\\Users\\smont\\Source\\repos\\Nuxiba\\testdevbackjr\\Prueba_2\\Nxt.Test\\Nxt.Test.WebApp\\Models\\EmpleadoViewModel.cs",
+              "RelativeToolTip": "Nxt.Test.WebApp\\Models\\EmpleadoViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T17:53:30.314Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "Crear.cshtml",
+              "DocumentMoniker": "C:\\Users\\smont\\Source\\repos\\Nuxiba\\testdevbackjr\\Prueba_2\\Nxt.Test\\Nxt.Test.WebApp\\Views\\Usuarios\\Crear.cshtml",
+              "RelativeDocumentMoniker": "Nxt.Test.WebApp\\Views\\Usuarios\\Crear.cshtml",
+              "ToolTip": "C:\\Users\\smont\\Source\\repos\\Nuxiba\\testdevbackjr\\Prueba_2\\Nxt.Test\\Nxt.Test.WebApp\\Views\\Usuarios\\Crear.cshtml",
+              "RelativeToolTip": "Nxt.Test.WebApp\\Views\\Usuarios\\Crear.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAC4AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-27T17:37:46.712Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\smont\\Source\\repos\\Nuxiba\\testdevbackjr\\Prueba_2\\Nxt.Test\\Nxt.Test.WebApp\\Views\\Usuarios\\Index.cshtml",
               "RelativeDocumentMoniker": "Nxt.Test.WebApp\\Views\\Usuarios\\Index.cshtml",
               "ToolTip": "C:\\Users\\smont\\Source\\repos\\Nuxiba\\testdevbackjr\\Prueba_2\\Nxt.Test\\Nxt.Test.WebApp\\Views\\Usuarios\\Index.cshtml",
               "RelativeToolTip": "Nxt.Test.WebApp\\Views\\Usuarios\\Index.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAABRAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-09-27T16:10:35.222Z",
               "EditorCaption": ""

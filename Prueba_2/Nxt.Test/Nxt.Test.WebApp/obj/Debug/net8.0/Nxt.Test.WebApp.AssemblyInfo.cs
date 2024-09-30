@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Nxt.Test.WebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+162a44af48407dde32094a3dc33baa3ace52543a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f6e379c4da5f360ad08808ec95d222c42f04dbe")]
 [assembly: System.Reflection.AssemblyProductAttribute("Nxt.Test.WebApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Nxt.Test.WebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

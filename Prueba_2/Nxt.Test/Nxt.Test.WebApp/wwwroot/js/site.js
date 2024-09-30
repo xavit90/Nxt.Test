@@ -29,3 +29,25 @@
 
     return { init: init }
 })();
+
+var ICrear = (function () {
+    function Empleado() {
+        var self = this;
+
+        self.Hoy = function () {
+            var fecha = new Date();
+            var dd = fecha.getDate();
+            var mm = fecha.getMonth() + 1;
+
+            return (dd < 10 ? "0" + dd : dd) + "/" + (mm < 10 ? "0" + mm : mm) + "/" + fecha.getFullYear();;
+        }
+    }
+
+    var init = function () {
+        var empleado = new Empleado();
+        $('#Empleado_FechaIngreso').val(empleado.Hoy());
+        $('#Empleado_Sueldo').val(0);
+    }
+
+    return { init: init }
+})();

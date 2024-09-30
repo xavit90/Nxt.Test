@@ -1,0 +1,62 @@
+﻿@model Nxt.Test.WebApp.Models.EmpleadoViewModel
+
+@{
+    ViewData["Title"] = "Crear";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Crear</h1>
+
+<h4>Usuario</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Crear">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Usuario.Login" class="control-label"></label>
+                <input asp-for="Usuario.Login" class="form-control" />
+                <span asp-validation-for="Usuario.Login" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Usuario.Nombre" class="control-label"></label>
+                <input asp-for="Usuario.Nombre" class="form-control" />
+                <span asp-validation-for="Usuario.Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Usuario.Paterno" class="control-label"></label>
+                <input asp-for="Usuario.Paterno" class="form-control" />
+                <span asp-validation-for="Usuario.Paterno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Usuario.Materno" class="control-label"></label>
+                <input asp-for="Usuario.Materno" class="form-control" />
+                <span asp-validation-for="Usuario.Materno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Empleado.Sueldo" class="control-label"></label>
+                <input asp-for="Empleado.Sueldo" class="form-control" />
+                <span asp-validation-for="Empleado.Sueldo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Empleado.FechaIngreso" class="control-label"></label>
+                <input asp-for="Empleado.FechaIngreso" class="form-control" />
+                <span asp-validation-for="Empleado.FechaIngreso" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Crear" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script type="text/javascript">
+        ICrear.init();
+    </script>
+}
